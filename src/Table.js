@@ -24,9 +24,13 @@ const TableBody = (props) => {
                 <td>{row.registerDate}</td>
                 <td>
                     <button className="accent-button"
-                            >
+                            onClick={() => {
+                                props.indexState(row.code);
+                                props.showMenu();
+                             }
+                            }>
                         Edit
-                        </button>
+                    </button>
                     <br/>
                     <button className="accent-button"
                             onClick={() => props.removeClient(row.code)}>
@@ -44,12 +48,13 @@ const TableBody = (props) => {
 class Table extends React.Component {
     render() {
         const {clientsData, removeClient} = this.props;
-
         return (
             <table className="striped-table">
                 <TableHead/>
                 <TableBody clientsData = {clientsData}
-                           removeClient = {removeClient}/>
+                           removeClient = {removeClient}
+                           showMenu = {this.props.showMenu}
+                           indexState = {this.props.indexState}/>
             </table>
         );
     }

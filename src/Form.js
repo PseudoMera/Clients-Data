@@ -17,15 +17,11 @@ class Form extends React.Component {
 
     handleChange = event => {
         const {name, value} = event.target;
-        if(typeof value === Number) {
-            this.setState({
-                [name]: parseFloat(value).toFixed(2),
-            });
-        } else {
+       
             this.setState({
                 [name]: value,
             });
-        }
+        
     }
 
     submitForm = () => {
@@ -39,6 +35,7 @@ class Form extends React.Component {
         const showMenu = this.props.showMenu ? 'show' : 'hide';
         return (
             <form className={showMenu}>
+                <h2>Agregar cliente</h2>
                 <label>Name</label>
                 <input type="text"
                        name="name"

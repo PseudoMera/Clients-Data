@@ -7,6 +7,7 @@ import Form from './Form';
 import EditClient from './EditClient';
 
 class App extends React.Component {
+    
     static clientRegisterDate = () => {
         var today = new Date();
         var dd = String(today.getDate()).padStart(2, '0');
@@ -17,22 +18,7 @@ class App extends React.Component {
     }
 
     state = {
-        clients : [
-            {
-                code: 1,
-                name: 'Albin',
-                balance: 1250.35,
-                registerDate: App.clientRegisterDate(),
-                
-            },
-            {
-                code: 2,
-                name: 'Roniel',
-                balance: 125.35,
-                registerDate: App.clientRegisterDate(),
-            }
-        ],
-
+        clients : JSON.parse(localStorage.getItem('clients')) || [],
         showMenu: false,
         showMenu2: false,
         clientCode: 0,
@@ -79,6 +65,11 @@ class App extends React.Component {
             registerDate: App.clientRegisterDate(),
         } : x)});
     }
+
+    componentDidUpdate(){
+        localStorage.setItem('clients', JSON.stringify(this.state.clients))
+    }
+
 
     render() {
         return (

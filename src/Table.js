@@ -4,11 +4,11 @@ const TableHead = () => {
     return (
         <thead>
             <tr>
-                <th>Codigo</th>
-                <th>Nombre</th>
+                <th>Code</th>
+                <th>Name</th>
                 <th>Balance</th>
-                <th>Fecha de Registro</th>
-                <th>Opciones</th>
+                <th>Register date</th>
+                <th>Options</th>
             </tr>
         </thead>
     );
@@ -23,7 +23,7 @@ const TableBody = (props) => {
                 <td>{row.balance}</td>
                 <td>{row.registerDate}</td>
                 <td>
-                    <button className="accent-button"
+                    <button 
                             onClick={() => {
                                 props.indexState(row.code);
                                 props.showMenu();
@@ -32,7 +32,7 @@ const TableBody = (props) => {
                         Edit
                     </button>
                     <br/>
-                    <button className="accent-button"
+                    <button 
                             onClick={() => props.removeClient(row.code)}>
                         Delete
                         </button>

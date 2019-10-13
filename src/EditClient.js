@@ -33,7 +33,7 @@ class EditClient extends React.Component {
         const showMenu = this.props.showMenu ? 'show' : 'hide';
         return(
             <form className={showMenu}>
-            <h2>Editar cliente {this.props.clientCode}</h2>
+            <h2>Edit client {this.props.clientCode}</h2>
             <label>Name</label>
             <input type="text"
                    name="name"
@@ -46,7 +46,7 @@ class EditClient extends React.Component {
                    value={balance}
                    onChange={this.handleChange}
                    />
-            <input className="accent-button"
+            <input 
                    type="button"
                    value="Submit"
                    onClick={this.submitForm}/>

@@ -24,15 +24,29 @@
     line-height: 1.15;
     /* 1 */
     -webkit-text-size-adjust: 100%;
-    /* 2 */ }
-  
+
+    /* background-color: #bdd4e7; */
+/* background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%); */
+/* background: -webkit-gradient(linear,  from(#29de7d), to(#8cbcfe)); */
+
+/* background-image: linear-gradient(90deg, #39ff88, #8cfb92, #b8f8a2, #d6f4ba, #e9f2d6); */
+background: url(https://cdn.pixabay.com/photo/2018/03/21/10/01/desktop-3246124_960_720.jpg) ; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+  /* background-color: #8cbcfe; */
+ }  
   /* Sections
      ========================================================================== */
   /**
    * Remove the margin in all browsers.
    */
   body {
-    margin: 0; }
+    margin: 0; 
+    /* background: -webkit-gradient(linear, left top, left bottom, from( #8ae9b3 0%), to(#c8d6e5 74%)); */
+    
+  }
   
   /**
    * Render the `main` element consistently in IE.
@@ -339,8 +353,7 @@
     font-size: 1rem; }
   
   body {
-    color: #404040;
-    background: white;
+    color: white;
     font-size: 1rem; }
   
   p,
@@ -365,7 +378,7 @@
     font-weight: 600;
     font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
     line-height: 1.2;
-    color: #404040; }
+    color: white; }
     h1:not(:first-child),
     h2:not(:first-child),
     h3:not(:first-child),
@@ -813,8 +826,8 @@
     caption-side: bottom;
     color: #ababab; }
   
-  .striped-table tbody tr:nth-child(odd) {
-    background-color: #f8f8f8; }
+  /* .striped-table tbody tr:nth-child(odd) {
+    background-color: #f8f8f8; } */
   
   .contain-table {
     overflow-x: auto; }
@@ -832,13 +845,13 @@
 
    #root {
     max-width: 1000px;
-    margin: 2rem auto;
-    padding:  1rem;
+    margin: 2em auto;
+    padding:  1em;
   }
 
   hr {
     border: 0;
     width: 100%;
-    background-color: #29de7d;
+    background-color: #0366EE;
     height: 5px;
   }

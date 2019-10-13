@@ -4,8 +4,8 @@ class Navigation extends React.Component {
     render() {
         return (
             <div>
-                <h1>Tabla de clientes</h1>
-                <button className="accent-button" onClick={() => this.props.showMenu()}>Agregar cliente</button>
+                <h1>Clients Data</h1>
+                <button onClick={() => this.props.showMenu()}>Add client</button>
             </div>
         );
     }
